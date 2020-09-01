@@ -47,14 +47,38 @@ namespace Steaks
 
         public static int GetRegistationNumber()
         {
-            numOfRegistered++;
-            Console.WriteLine("Here is your registration number : {0}", numOfRegistered);
+            Console.WriteLine("Please choose your registration number");
+            string num = Console.ReadLine();
+            int registrationNum = 0;
+            bool success;
+            do
+            {
+                success = int.TryParse(num, out int registarNum);
+            } while (!success);
+            return registrationNum;
         }
 
         public static string PrintContestantWinner(Contestant contestant)
         {
-            
-            Console.WriteLine("CONGRATULATIONS {0}, ", contestant.);
+            string message = $"CONGRATULATIONS {contestant.firstName}, YOU HAVE WON THE SWEEPSTAKES";
+            return message;
+        }
+
+        public static string GetCollection()
+        {
+            Console.WriteLine("Would you like to use the Queue collection or the Stack collection?" +
+                "'Q' for Queue and 'S' for Stack");
+            string collectionType;
+            do
+            {
+                collectionType = Console.ReadLine();
+                if(collectionType != "Q" && collectionType != "S")
+                {
+                    Console.WriteLine("That was not correct input, please try again...");
+                }
+            } while (collectionType != "Q" && collectionType != "S");
+         
+            return collectionType;
         }
     }
 }

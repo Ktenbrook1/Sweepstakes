@@ -10,6 +10,8 @@ namespace Steaks
     {
         static void Main(string[] args)
         {
+            Simulation SweepStakes = new Simulation();
+            SweepStakes.CreatMarketingFirmWithManager();
         }
     }
 }

@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Steaks
 {
-    class Contestant
+    public class Contestant
     {
         public string firstName;
-        string lastName;
-        string email;
-        int registrationNumber;
+        public string lastName;
+        public string email;
+        public int registrationNumber;
         public Contestant()
         {
-            //is this ok
             firstName = UserInterface.GetFirstName();
             lastName = UserInterface.GetLastName();
             email = UserInterface.GetEmail();
