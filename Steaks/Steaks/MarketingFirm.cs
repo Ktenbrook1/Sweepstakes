@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Steaks
 {
-    class Sweapsteaks
+    class MarketingFirm
     {
+
+        public void CreateSweepsteaks()
+        {
+
+        }
     }
 }

@@ -8,5 +8,17 @@ namespace Steaks
 {
     class Contestant
     {
+        public string firstName;
+        string lastName;
+        string email;
+        int registrationNumber;
+        public Contestant()
+        {
+            //is this ok
+            firstName = UserInterface.GetFirstName();
+            lastName = UserInterface.GetLastName();
+            email = UserInterface.GetEmail();
+            registrationNumber = UserInterface.GetRegistationNumber();
+        }
     }
 }
