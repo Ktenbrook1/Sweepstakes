@@ -12,7 +12,7 @@ namespace Steaks
 
         public MarketingFirm()
         {
-            
+
         }
         public void Marketingfirm(ISweepstakesManager manager)
         {
@@ -24,10 +24,12 @@ namespace Steaks
             if(collection == "Q")
             {
                 _manager = new SweepstakesQueueManager();
+                Marketingfirm(_manager);
             }
             else if(collection == "S")
             {
                 _manager = new SweepstakesStackManager();
+                Marketingfirm(_manager);
             }
         }
     }
